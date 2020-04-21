@@ -7,14 +7,14 @@ var lancio_cpu = Math.floor(Math.random() * 6 + 1);
 //Stabilisci se l'utente ha inserito un numero valido
 if (lancio_utente >= 1 && lancio_utente <= 6) {
     //Mostra il lancio dell'utente e quello della cpu
-    console.log('Lancio utente: ' + lancio_utente);
+    console.log('Lancio utente: ' + Math.round(lancio_utente));
     console.log('Lancio CPU: ' + lancio_cpu);
 
     //Stabilisce chi ha vinto (numero più alto) o se c'è un pareggio
-    if (lancio_utente > lancio_cpu) {
+    if (Math.round(lancio_utente) > lancio_cpu) {
         console.log('Hai vinto!');
     }
-    else if (lancio_utente == lancio_cpu) {
+    else if (Math.round(lancio_utente) == lancio_cpu) {
         console.log("E' un pareggio!");
     }
     else {
@@ -46,8 +46,8 @@ else if (lancio_utente == '') {
 }
 //Fa automaticamente perdere l'utente nel caso inserisca un numero più alto di 6
 else if (lancio_utente > 6) {
-    console.log('Lancio utente: ' + lancio_utente);
-    console.log('Lancio CPU: ' + (parseInt(lancio_utente) + 1));
+    console.log('Lancio utente: ' + Math.round(lancio_utente));
+    console.log('Lancio CPU: ' + (Math.round(parseFloat(lancio_utente)) + 1));
     console.log('Hai perso!\nVuoi giocare a chi bara di più? Fatti sotto');
 }
 //Messaggio di errore se l'utente inserisce un dato non valido
