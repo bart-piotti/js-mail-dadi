@@ -1,5 +1,5 @@
 //L'utente decidere se tirare il dado con un numero 1-6 o se affidarsi al caso
-var lancio_utente = Math.round(prompt("Inserisci un numero da 1 a 6 che determinerà il risultato del tuo lancio di dado.\nDigita 'RANDOM' per affidarti al caso"));
+var lancio_utente = prompt("Inserisci un numero da 1 a 6 che determinerà il risultato del tuo lancio di dado.\nDigita 'RANDOM' per affidarti al caso");
 
 //genera un lancio "casuale" per la cpu compreso tra 1 e 6
 var lancio_cpu = Math.floor(Math.random() * 6 + 1);
